@@ -112,5 +112,22 @@
             <button type="button" id="processBtn">Process Data</button>
         </form>
     </div>
+    <script>
+    document.getElementById("processBtn").addEventListener("click", function () {
+
+        // Store values in variables
+        let studentName = document.getElementById("studentName").value;
+        let studentAge = document.getElementById("studentAge").value;
+        let isEnrolled = document.getElementById("isEnrolled").checked;
+
+        // Combine variables using string concatenation
+        let message = "Student Name is " + studentName +
+                      ", Age is " + studentAge +
+                      ", Enrolled status is " + isEnrolled;
+
+        // Display the message
+        alert(message);
+    });
+</script>
 </body>
 </html>
