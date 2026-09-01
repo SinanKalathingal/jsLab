@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMEA College - Undergraduate JS Lab</title>
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -83,144 +84,253 @@
 </head>
 
 <body>
+
     <div class="container">
+
         <h2>Undergraduate JavaScript Fundamentals Lab</h2>
-        <p>Fill out the fields below. Currently, this form is entirely static. Your assignment is to bring it to life
-            using JavaScript.</p>
+
+        <p>
+            Fill out the fields below. Currently, this form is entirely static.
+            Your assignment is to bring it to life using JavaScript.
+        </p>
 
         <form id="jsLabForm">
+
             <div class="form-group">
-                <label for="studentName">1. Student Name:</label>
+                <label for="studentName">
+                    1. Student Name:
+                </label>
+
                 <input type="text" id="studentName" placeholder="Enter your full name">
             </div>
 
+
             <div class="form-group">
-                <label for="studentAge">2. Age:</label>
+                <label for="studentAge">
+                    2. Age:
+                </label>
+
                 <input type="number" id="studentAge" placeholder="Enter your age">
             </div>
 
+
             <div class="form-group">
                 <label for="isEnrolled">
-                    <input type="checkbox" id="isEnrolled"> 3. Is currently enrolled in the degree program
+
+                    <input type="checkbox" id="isEnrolled">
+
+                    3. Is currently enrolled in the degree program
+
                 </label>
             </div>
 
+
             <hr>
-            <h3 style="color: #2c3e50;">Math & Special Values Tester</h3>
+
+
+            <h3 style="color: #2c3e50;">
+                Math & Special Values Tester
+            </h3>
+
 
             <div class="form-group">
-                <label for="numA">4. Value A (Numerator):</label>
+
+                <label for="numA">
+                    4. Value A (Numerator):
+                </label>
+
                 <input type="text" id="numA" placeholder="Enter any number">
+
             </div>
+
 
             <div class="form-group">
-                <label for="numB">5. Value B (Denominator):</label>
-                <input type="text" id="numB" placeholder="Try entering 0 here to test division by zero">
+
+                <label for="numB">
+                    5. Value B (Denominator):
+                </label>
+
+                <input type="text" id="numB"
+                    placeholder="Try entering 0 here to test division by zero">
+
             </div>
+
 
             <div class="form-group">
-                <label for="wordValue">6. Text for Math Operation:</label>
-                <input type="text" id="wordValue" placeholder="Enter a word (e.g., 'hello') to test invalid math">
+
+                <label for="wordValue">
+                    6. Text for Math Operation:
+                </label>
+
+                <input type="text" id="wordValue"
+                    placeholder="Enter a word (e.g., 'hello') to test invalid math">
+
             </div>
 
-            <button type="button" id="processBtn">Process Data</button>
+
+            <button type="button" id="processBtn">
+                Process Data
+            </button>
+
         </form>
+
     </div>
+
+
     <script>
-    document.getElementById("processBtn").addEventListener("click", function () {
 
-        // Task 1: Popup Boxes and Conditional Logic
+        document.getElementById("processBtn").addEventListener("click", function () {
 
-        // Ask the user for confirmation
-        let userConfirmation = confirm("Are you sure?");
+            // ==================================================
+            // PART 2 - TASK 1: POPUP BOX AND CONDITIONAL LOGIC
+            // ==================================================
 
-        // Check if the user clicked Cancel
-        if (userConfirmation === false) {
-
-            alert("Operation cancelled.");
-
-        } else {
-
-            // User clicked OK, so the rest of the script executes
+            let userConfirmation = confirm("Are you sure?");
 
 
-            // ---------------- Task 1 from Part 1 ----------------
+            if (userConfirmation === false) {
 
-            // Store values in variables
-            let studentName = document.getElementById("studentName").value;
-            let studentAge = document.getElementById("studentAge").value;
-            let isEnrolled = document.getElementById("isEnrolled").checked;
+                // User clicked Cancel
+                alert("Operation cancelled.");
 
-            // Combine variables using string concatenation
-            let message = "Student Name is " + studentName +
-                ", Age is " + studentAge +
-                ", Enrolled status is " + isEnrolled;
+            } else {
 
-            alert(message);
+                // ==========================================
+                // PART 1 - TASK 1: VARIABLES AND STRINGS
+                // ==========================================
 
+                let studentName = document.getElementById("studentName").value;
 
-            // ---------------- Task 2 from Part 1 ----------------
+                let studentAge = document.getElementById("studentAge").value;
 
-            // Get Value A and Value B
-            let valueA = document.getElementById("numA").value;
-            let valueB = document.getElementById("numB").value;
-
-            // Divide Value A by Value B
-            let result = valueA / valueB;
-
-            alert("Division Result: " + result);
+                let isEnrolled = document.getElementById("isEnrolled").checked;
 
 
-            // ---------------- Task 3 from Part 1 ----------------
-
-            // Get the text value
-            let textValue = document.getElementById("wordValue").value;
-
-            // Attempt mathematical division
-            let textResult = textValue / 2;
-
-            alert("Text Division Result: " + textResult);
+                let message =
+                    "Student Name is " + studentName +
+                    ", Age is " + studentAge +
+                    ", Enrolled status is " + isEnrolled;
 
 
-            // ---------------- Task 4 from Part 1 ----------------
-
-            // Scientific notation
-            let largeNumber = 4.25e+6;
-            let smallNumber = 4.25e-6;
-
-            alert("Large Number: " + largeNumber +
-                "\nSmall Number: " + smallNumber);
+                alert(message);
 
 
-            // ---------------- Task 2: Arrays & Output ----------------
+                // ==========================================
+                // PART 1 - TASK 2: TESTING INFINITY
+                // ==========================================
 
-            // Create an array with three string values
-            let favoriteSubjects = ["JavaScript", "Web Development", "Java"];
+                let valueA = document.getElementById("numA").value;
 
-            // Loop through the array using for...of
-            for (let subject of favoriteSubjects) {
+                let valueB = document.getElementById("numB").value;
 
-                document.write(subject + "<br>");
+
+                let result = valueA / valueB;
+
+
+                alert("Division Result: " + result);
+
+
+                // ==========================================
+                // PART 1 - TASK 3: TESTING NaN
+                // ==========================================
+
+                let textValue = document.getElementById("wordValue").value;
+
+
+                let textResult = textValue / 2;
+
+
+                alert("Text Division Result: " + textResult);
+
+
+                // ==========================================
+                // PART 1 - TASK 4: SCIENTIFIC NOTATION
+                // ==========================================
+
+                let largeNumber = 4.25e+6;
+
+                let smallNumber = 4.25e-6;
+
+
+                alert(
+                    "Large Number: " + largeNumber +
+                    "\nSmall Number: " + smallNumber
+                );
+
+
+                // ==========================================
+                // PART 1 - TASK 5: DOCUMENT OUTPUT
+                // ==========================================
+
+                document.write(
+                    "Task 2 - Division Result: " +
+                    result +
+                    "<br>"
+                );
+
+
+                document.write(
+                    "Task 3 - Text Division Result: " +
+                    textResult +
+                    "<br>"
+                );
+
+
+                document.write(
+                    "Task 4 - Large Number: " +
+                    largeNumber +
+                    "<br>"
+                );
+
+
+                document.write(
+                    "Task 4 - Small Number: " +
+                    smallNumber +
+                    "<br>"
+                );
+
+
+                // ==========================================
+                // PART 2 - TASK 2: ARRAYS AND OUTPUT
+                // ==========================================
+
+                let favoriteSubjects = [
+                    "JavaScript",
+                    "Web Development",
+                    "Java"
+                ];
+
+
+                for (let subject of favoriteSubjects) {
+
+                    document.write(subject + "<br>");
+
+                }
+
+
+                // ==========================================
+                // PART 2 - TASK 3: STANDARD FOR LOOP
+                // ==========================================
+
+                let numberOfTimes = Number(valueA);
+
+
+                for (
+                    let i = 0;
+                    i < numberOfTimes;
+                    i++
+                ) {
+
+                    document.write(studentName + "<br>");
+
+                }
 
             }
 
+        });
 
-            // ---------------- Task 3: Standard For Loop ----------------
+    </script>
 
-            // Convert Value A to a number
-            let numberOfTimes = Number(valueA);
-
-            // Print the student's name as many times as Value A
-            for (let i = 0; i < numberOfTimes; i++) {
-
-                document.write(studentName + "<br>");
-
-            }
-
-        }
-
-    });
-</script>
 </body>
 
 </html>
