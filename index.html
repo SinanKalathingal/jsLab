@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMEA College - Undergraduate JS Lab</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 40px; 
+            background-color: #f4f7f6; 
+            color: #333;
+        }
+        .container { 
+            max-width: 650px; 
+            margin: auto; 
+            padding: 30px; 
+            background: #ffffff; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+        }
+        h2 { 
+            color: #2c3e50; 
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600; 
+            font-size: 0.9em;
+        }
+        input[type="text"], input[type="number"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+        button { 
+            padding: 12px 20px; 
+            background-color: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 1em;
+            font-weight: bold;
+            width: 100%;
+        }
+        button:hover { 
+            background-color: #2980b9; 
+        }
+        .hint {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Undergraduate JavaScript Fundamentals Lab</h2>
+        <p>Fill out the fields below. Currently, this form is entirely static. Your assignment is to bring it to life using JavaScript.</p>
+        
+        <form id="jsLabForm">
+            <div class="form-group">
+                <label for="studentName">1. Student Name:</label>
+                <input type="text" id="studentName" placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="studentAge">2. Age:</label>
+                <input type="number" id="studentAge" placeholder="Enter your age">
+            </div>
+            
+            <div class="form-group">
+                <label for="isEnrolled">
+                    <input type="checkbox" id="isEnrolled"> 3. Is currently enrolled in the degree program
+                </label>
+            </div>
+            
+            <hr>
+            <h3 style="color: #2c3e50;">Math & Special Values Tester</h3>
+            
+            <div class="form-group">
+                <label for="numA">4. Value A (Numerator):</label>
+                <input type="text" id="numA" placeholder="Enter any number">
+            </div>
+            
+            <div class="form-group">
+                <label for="numB">5. Value B (Denominator):</label>
+                <input type="text" id="numB" placeholder="Try entering 0 here to test division by zero">
+            </div>
+            
+            <div class="form-group">
+                <label for="wordValue">6. Text for Math Operation:</label>
+                <input type="text" id="wordValue" placeholder="Enter a word (e.g., 'hello') to test invalid math">
+            </div>
+            
+            <button type="button" id="processBtn">Process Data</button>
+        </form>
+    </div>
+</body>
+</html>
