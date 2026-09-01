@@ -127,53 +127,54 @@
         </form>
     </div>
     <script>
-        document.getElementById("processBtn").addEventListener("click", function () {
+    document.getElementById("processBtn").addEventListener("click", function () {
 
-            // Store values in variables
-            let studentName = document.getElementById("studentName").value;
-            let studentAge = document.getElementById("studentAge").value;
-            let isEnrolled = document.getElementById("isEnrolled").checked;
+        // Task 1: Store values in variables
+        let studentName = document.getElementById("studentName").value;
+        let studentAge = document.getElementById("studentAge").value;
+        let isEnrolled = document.getElementById("isEnrolled").checked;
 
-            // Combine variables using string concatenation
-            let message = "Student Name is " + studentName +
-                ", Age is " + studentAge +
-                ", Enrolled status is " + isEnrolled;
+        // Combine variables using string concatenation
+        let message = "Student Name is " + studentName +
+            ", Age is " + studentAge +
+            ", Enrolled status is " + isEnrolled;
 
-            // Display the message
-            alert(message);
 
-            // Get Value A and Value B
-            let valueA = document.getElementById("numA").value;
-            let valueB = document.getElementById("numB").value;
+        // Task 2: Get Value A and Value B
+        let valueA = document.getElementById("numA").value;
+        let valueB = document.getElementById("numB").value;
 
-            // Divide Value A by Value B
-            let result = valueA / valueB;
+        // Divide Value A by Value B
+        let result = valueA / valueB;
 
-            // Display the result
-            alert("Division Result: " + result);
 
-            // Task 3: Get the text value
-            let textValue = document.getElementById("wordValue").value;
+        // Task 3: Get the text value
+        let textValue = document.getElementById("wordValue").value;
 
-            // Attempt mathematical division
-            let textResult = textValue / 2;
+        // Attempt mathematical division
+        let textResult = textValue / 2;
 
-            // Display the result
-            alert("Text Division Result: " + textResult);
 
-            // Task 4: Scientific Notation
+        // Task 4: Scientific Notation
 
-            // Very large number
-            let largeNumber = 4.25e+6;
+        // Very large number
+        let largeNumber = 4.25e+6;
 
-            // Very small decimal number
-            let smallNumber = 4.25e-6;
+        // Very small decimal number
+        let smallNumber = 4.25e-6;
 
-            // Display the values
-            alert("Large Number: " + largeNumber +
-                "\nSmall Number: " + smallNumber);
-        });
-    </script>
+
+        // Task 5: Output results using document.write()
+        document.write("Task 2 - Division Result: " + result + "<br>");
+
+        document.write("Task 3 - Text Division Result: " + textResult + "<br>");
+
+        document.write("Task 4 - Large Number: " + largeNumber + "<br>");
+
+        document.write("Task 4 - Small Number: " + smallNumber + "<br>");
+
+    });
+</script>
 </body>
 
 </html>
