@@ -129,49 +129,95 @@
     <script>
     document.getElementById("processBtn").addEventListener("click", function () {
 
-        // Task 1: Store values in variables
-        let studentName = document.getElementById("studentName").value;
-        let studentAge = document.getElementById("studentAge").value;
-        let isEnrolled = document.getElementById("isEnrolled").checked;
+        // Task 1: Popup Boxes and Conditional Logic
 
-        // Combine variables using string concatenation
-        let message = "Student Name is " + studentName +
-            ", Age is " + studentAge +
-            ", Enrolled status is " + isEnrolled;
+        // Ask the user for confirmation
+        let userConfirmation = confirm("Are you sure?");
 
+        // Check if the user clicked Cancel
+        if (userConfirmation === false) {
 
-        // Task 2: Get Value A and Value B
-        let valueA = document.getElementById("numA").value;
-        let valueB = document.getElementById("numB").value;
+            alert("Operation cancelled.");
 
-        // Divide Value A by Value B
-        let result = valueA / valueB;
+        } else {
+
+            // User clicked OK, so the rest of the script executes
 
 
-        // Task 3: Get the text value
-        let textValue = document.getElementById("wordValue").value;
+            // ---------------- Task 1 from Part 1 ----------------
 
-        // Attempt mathematical division
-        let textResult = textValue / 2;
+            // Store values in variables
+            let studentName = document.getElementById("studentName").value;
+            let studentAge = document.getElementById("studentAge").value;
+            let isEnrolled = document.getElementById("isEnrolled").checked;
+
+            // Combine variables using string concatenation
+            let message = "Student Name is " + studentName +
+                ", Age is " + studentAge +
+                ", Enrolled status is " + isEnrolled;
+
+            alert(message);
 
 
-        // Task 4: Scientific Notation
+            // ---------------- Task 2 from Part 1 ----------------
 
-        // Very large number
-        let largeNumber = 4.25e+6;
+            // Get Value A and Value B
+            let valueA = document.getElementById("numA").value;
+            let valueB = document.getElementById("numB").value;
 
-        // Very small decimal number
-        let smallNumber = 4.25e-6;
+            // Divide Value A by Value B
+            let result = valueA / valueB;
+
+            alert("Division Result: " + result);
 
 
-        // Task 5: Output results using document.write()
-        document.write("Task 2 - Division Result: " + result + "<br>");
+            // ---------------- Task 3 from Part 1 ----------------
 
-        document.write("Task 3 - Text Division Result: " + textResult + "<br>");
+            // Get the text value
+            let textValue = document.getElementById("wordValue").value;
 
-        document.write("Task 4 - Large Number: " + largeNumber + "<br>");
+            // Attempt mathematical division
+            let textResult = textValue / 2;
 
-        document.write("Task 4 - Small Number: " + smallNumber + "<br>");
+            alert("Text Division Result: " + textResult);
+
+
+            // ---------------- Task 4 from Part 1 ----------------
+
+            // Scientific notation
+            let largeNumber = 4.25e+6;
+            let smallNumber = 4.25e-6;
+
+            alert("Large Number: " + largeNumber +
+                "\nSmall Number: " + smallNumber);
+
+
+            // ---------------- Task 2: Arrays & Output ----------------
+
+            // Create an array with three string values
+            let favoriteSubjects = ["JavaScript", "Web Development", "Java"];
+
+            // Loop through the array using for...of
+            for (let subject of favoriteSubjects) {
+
+                document.write(subject + "<br>");
+
+            }
+
+
+            // ---------------- Task 3: Standard For Loop ----------------
+
+            // Convert Value A to a number
+            let numberOfTimes = Number(valueA);
+
+            // Print the student's name as many times as Value A
+            for (let i = 0; i < numberOfTimes; i++) {
+
+                document.write(studentName + "<br>");
+
+            }
+
+        }
 
     });
 </script>
